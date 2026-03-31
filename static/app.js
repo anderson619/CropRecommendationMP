@@ -2,6 +2,10 @@
  * Crop Recommendation – Frontend Logic
  */
 
+// URL del Backend en Render (Producción)
+const API_BASE_URL = "https://croprecommendationmp.onrender.com";
+
+
 // ── Crop → Emoji map ──────────────────────────────────────────────
 const cropEmojis = {
   rice: '🌾', wheat: '🌾', maize: '🌽', corn: '🌽',
@@ -34,7 +38,8 @@ form.addEventListener('submit', async (e) => {
   };
 
   const model = document.getElementById('modelSelect').value;
-  const endpoint = `/predict/${model}`;
+  const endpoint = `${API_BASE_URL}/predict/${model}`;
+
 
   // UI – loading state
   btn.disabled = true;
