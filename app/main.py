@@ -43,7 +43,6 @@ async def root():
     """Returns a JSON welcome message (visible in Postman)."""
     return {
         "message": "Crop Recommendation API is running 🌱",
-        "docs": "/docs",
         "endpoints": ["/predict/svm", "/predict/rf"],
     }
 
